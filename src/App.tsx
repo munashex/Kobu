@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 const App = () => {
 
   return (
-    <div>
+    <div className="bg-[#000000] w-full min-h-screen">
        <Router>
         <Navbar/>
         <Routes> 
