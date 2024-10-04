@@ -15,11 +15,13 @@ const toggleNav = () => setOpenNav(!openNav)
 
 
     return (
-        <div className="bg-[#000000] py-4 lg:py-6 px-4 md:px-7 lg:px-12 font-unbounded">
+        <div className={`bg-[#000000] py-4 lg:py-6 px-4 md:px-7 lg:px-12 font-unbounded ${openNav ? 'h-screen' : ''}`}>
           {/* navbar bar */} 
           <nav>
            <div className="flex justify-between items-center">
-            <img src={Logo} className="w-8 lg:w-9"/> 
+            <Link to="/"> 
+            <img src={Logo} className="w-8 lg:w-11"/> 
+            </Link>
             <button onClick={toggleNav} className="font-unbounded hover:bg-white transition ease-in-out delay-200 duration-200 hover:text-black  text-white border-2 border-white py-0.5 px-3 rounded-full text-lg"> 
              {openNav ? <span className="animate-fade-right">CLOSE</span> : <span className="animate-fade-left">MENU</span>} 
             </button>
