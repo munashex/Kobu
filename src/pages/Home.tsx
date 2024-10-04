@@ -16,8 +16,9 @@ const Home = () => {
                     <video 
                         src={homeVideo}
                         muted
+                        autoPlay
                         playsInline
-                        loop
+                        loop            
                         className="w-full h-full object-cover"
                     />
                 </div>
