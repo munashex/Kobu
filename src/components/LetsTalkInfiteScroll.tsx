@@ -1,5 +1,6 @@
 import  { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const LetsTalkInfiniteScroll = ({ speed = 20000 }) => {
   const [translateX, setTranslateX] = useState(0);
@@ -21,8 +22,12 @@ const LetsTalkInfiniteScroll = ({ speed = 20000 }) => {
     return () => clearInterval(intervalId);
   }, [speed]);
 
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }
+
   return (
-    <div className="w-full overflow-hidden bg-black py-4">
+    <div className="w-full overflow-hidden bg-white py-4">
       <div
         className="flex whitespace-nowrap transition-transform duration-1000 ease-linear"
         style={{ transform: `translateX(${translateX}%)` }}
@@ -32,8 +37,8 @@ const LetsTalkInfiniteScroll = ({ speed = 20000 }) => {
             key={index}
             className="flex-none inline-block px-4"
           >
-            <Link to="/contact" className="text-4xl font-bold text-[#111111]">
-              {item}
+            <Link onClick={scrollToTop} to="/contact" className="text-2xl md:text-4xl hover:underline  inline-flex items-center gap-2 lg:text-6xl font-bold text-[#111111]">
+              {item} <FaExternalLinkAlt size={28}/>
             </Link>
           </div>
         ))}

@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar"
 import Work from './pages/Work' 
 import About from './pages/About' 
 import Contact from "./pages/Contact"
+import Footer from "./components/Footer"  
+import Services from './pages/Services' 
+import NotFound from "./pages/NotFound"
 
 const App = () => {
 
@@ -15,8 +18,11 @@ const App = () => {
           <Route path="/" element={<Home/>}/> 
           <Route path="/works" element={<Work/>}/> 
           <Route path="/about" element={<About/>}/>
-          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/contact" element={<Contact/>}/> 
+          <Route path="/services" element={<Services/>}/> 
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
+        <Footer/>
        </Router>
     </div>
   )
