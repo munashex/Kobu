@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Kobu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Kobu Screenshot](https://github.com/munashex/Kobu/blob/main/public/Screenshot%202024-11-11%2014.20.11.png)](https://kobu-zeta.vercel.app/)
 
-Currently, two official plugins are available:
+**Kobu** specializes in branding, packaging, and digital animations, providing businesses with creative solutions to establish a strong and unique brand identity. From eye-catching packaging to dynamic digital animations, Kobu offers a comprehensive suite of services to elevate brands in the competitive marketplace.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+- **Branding:** Create unique brand identities with innovative design strategies.
+- **Packaging Design:** Design custom packaging that enhances product appeal.
+- **Digital Animations:** Bring brand elements to life with creative animations.
+- **Collaborative Process:** Work closely with clients to reflect their brand's essence.
 
-## Expanding the ESLint configuration
+## Technologies Used
+- **Frontend:** TypeScript, React, Tailwind CSS
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Live Demo
+Check out Kobu [here](https://kobu-zeta.vercel.app/).
 
-- Configure the top-level `parserOptions` property like this:
+## Source Code
+Explore the code on GitHub: [Kobu](https://github.com/munashex/Kobu).
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Kobu helps businesses stand out with a tailored approach to branding and design, ensuring that each project tells a unique story through visually compelling and engaging design elements.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
